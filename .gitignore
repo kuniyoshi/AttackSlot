@@ -48,3 +48,7 @@ sysinfo.txt
 /Assets/Scenes/TestScene.unity.meta
 /Assets/Scenes/TestScene/
 /Assets/Scenes/TestScene.meta
+
+# AssetStore
+/Assets/Plugins/Zenject/
+/Assets/Plugins/Zenject.meta
