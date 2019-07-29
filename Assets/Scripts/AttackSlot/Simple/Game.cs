@@ -1,5 +1,5 @@
 using System;
-using AttackSlot.Simple.Constant;
+using AttackSlot.Constant;
 using AttackSlot.Simple.Data;
 using AttackSlot.Simple.Factory;
 using UnityEngine;

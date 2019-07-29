@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dfe4d966bbe4c9fac295b78d18008ab, type: 3}
   m_Name: UserData
   m_EditorClassIdentifier: 
-  AgentCount: 3
+  AgentCount: 8
   Point: {x: 0, y: 0, z: -7}

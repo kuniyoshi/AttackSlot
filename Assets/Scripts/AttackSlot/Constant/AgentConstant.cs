@@ -1,4 +1,4 @@
-namespace AttackSlot.Simple.Constant
+namespace AttackSlot.Constant
 {
 
     public static class AgentConstant
