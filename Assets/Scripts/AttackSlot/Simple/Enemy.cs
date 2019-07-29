@@ -1,3 +1,4 @@
+using AttackSlot.Immutable;
 using UnityEngine;
 
 namespace AttackSlot.Simple

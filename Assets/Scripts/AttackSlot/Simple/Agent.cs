@@ -1,5 +1,6 @@
 ﻿using System;
 using AttackSlot.Data;
+using AttackSlot.Immutable;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Assertions;

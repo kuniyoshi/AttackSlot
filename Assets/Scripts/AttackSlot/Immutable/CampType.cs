@@ -1,4 +1,4 @@
-namespace AttackSlot.Simple
+namespace AttackSlot.Immutable
 {
 
     public enum CampType
