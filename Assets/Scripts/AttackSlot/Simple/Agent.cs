@@ -1,5 +1,5 @@
 ﻿using System;
-using AttackSlot.Simple.Data;
+using AttackSlot.Data;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Assertions;

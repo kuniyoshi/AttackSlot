@@ -1,4 +1,4 @@
-using AttackSlot.Simple.Data;
+using AttackSlot.Data;
 using AttackSlot.Simple.Factory;
 using UnityEngine.Assertions;
 using Zenject;

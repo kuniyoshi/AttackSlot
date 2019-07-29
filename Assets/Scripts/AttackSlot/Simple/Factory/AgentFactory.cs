@@ -1,4 +1,4 @@
-using AttackSlot.Simple.Data;
+using AttackSlot.Data;
 using Zenject;
 
 namespace AttackSlot.Simple.Factory

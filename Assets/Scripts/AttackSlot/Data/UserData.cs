@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AttackSlot.Simple.Data
+namespace AttackSlot.Data
 {
 
     [CreateAssetMenu(menuName = "AttackSlot/UserData")]
