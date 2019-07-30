@@ -37,6 +37,24 @@ namespace AttackSlot.Slot.Installer
                     return agent.GetComponent<NavMeshAgent>();
                 })
                 .AsSingle();
+
+            Container.BindInterfacesAndSelfTo<BehaviorAcceptor>()
+                .FromMethod(context =>
+                {
+                    var agent = context.Container.Resolve<SlotAgent>();
+
+                    return agent.GetComponent<BehaviorAcceptor>();
+                })
+                .AsSingle();
+
+            Container.BindInterfacesAndSelfTo<BehaviorInformation>()
+                .FromMethod(context =>
+                {
+                    var agent = context.Container.Resolve<SlotAgent>();
+
+                    return agent.GetComponent<BehaviorInformation>();
+                })
+                .AsSingle();
         }
 
     }

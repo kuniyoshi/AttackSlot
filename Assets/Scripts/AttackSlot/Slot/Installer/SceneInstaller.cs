@@ -1,4 +1,3 @@
-using System;
 using AttackSlot.Data;
 using AttackSlot.Slot.Factory;
 using UnityEngine.Assertions;
@@ -31,6 +30,17 @@ namespace AttackSlot.Slot.Installer
 
             Container.Bind<SlotEnemy>()
                 .FromInstance(SlotEnemy)
+                .AsSingle();
+
+            Container.Bind<Slot>()
+                .FromMethod(context =>
+                {
+                    var agent = context.Container.Resolve<SlotEnemy>();
+                    var slot = agent.GetComponent<Slot>()
+                               ?? agent.gameObject.AddComponent<Slot>();
+
+                    return slot;
+                })
                 .AsSingle();
 
             Container.BindInterfacesAndSelfTo<SlotGame>()

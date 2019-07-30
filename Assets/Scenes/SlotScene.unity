@@ -119,7 +119,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 02844ead0eca8412f982936a5f36ce80, type: 2}
 --- !u!1001 &637027034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131,6 +131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8055765800320730753, guid: 87135099e462f41ab9e9f2415dc1d4ea,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1848590727280361918, guid: 87135099e462f41ab9e9f2415dc1d4ea,
         type: 3}

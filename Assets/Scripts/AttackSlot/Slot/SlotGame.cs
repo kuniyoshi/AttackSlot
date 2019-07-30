@@ -1,4 +1,5 @@
 using System;
+using AttackSlot.Constant;
 using AttackSlot.Data;
 using AttackSlot.Slot.Factory;
 using UnityEngine;
@@ -40,14 +41,13 @@ namespace AttackSlot.Slot
             {
                 var data = ScriptableObject.CreateInstance<AgentData>();
                 data.InitialPoint = GameData.UserData.Point;
-                data.AttackRange = Constant.AgentConstant.AttackRange;
-                data.AttackIntervalSeconds = Constant.AgentConstant.AttackIntervalSeconds;
+                data.AttackRange = AgentConstant.AttackRange;
+                data.AttackIntervalSeconds = AgentConstant.AttackIntervalSeconds;
 
                 Factory.Create(data);
 
                 _spawnedCount++;
             }
-
         }
 
     }

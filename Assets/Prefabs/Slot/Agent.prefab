@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 1023054479804476923}
   - component: {fileID: 8233408199110911392}
   - component: {fileID: 9077188002000257492}
+  - component: {fileID: 4012911270361626548}
+  - component: {fileID: 22509230853528438}
+  - component: {fileID: 2716334825943173862}
   m_Layer: 0
   m_Name: Agent
   m_TagString: Untagged
@@ -65,6 +68,67 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c8d14f2d8b0443fba1f28f445bfcd97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4012911270361626548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023054479804476920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7b55c7ecdb49a4a89fa5e6f9022861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWhenEnabled: 1
+  pauseWhenDisabled: 0
+  restartWhenComplete: 0
+  logTaskChanges: 0
+  group: 0
+  resetValuesOnRestart: 0
+  externalBehavior: {fileID: 11400000, guid: 445372bfc6d3e4402b31593c2fe20de5, type: 2}
+  mBehaviorSource:
+    behaviorName: SlotAgentBehavior
+    behaviorDescription: 
+    mTaskData:
+      types: []
+      parentIndex: 
+      startIndex: 
+      variableStartIndex: 
+      JSONSerialization: 
+      fieldSerializationData:
+        typeName: []
+        fieldNameHash: 
+        startIndex: 
+        dataPosition: 
+        unityObjects: []
+        byteData: 
+        byteDataArray: 
+      Version: 
+--- !u!114 &22509230853528438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023054479804476920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 916e3c738e504287b71415d3b15bf578, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2716334825943173862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023054479804476920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c4717d14c6c4baeba66aff6628d9dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1023054480184157054
