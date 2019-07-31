@@ -37,6 +37,11 @@ namespace AttackSlot.Slot
             _slotAgent.Move();
         }
 
+        public void UpdateSlot()
+        {
+            _slotAgent.UpdateSlot();
+        }
+
     }
 
 }

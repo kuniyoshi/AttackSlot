@@ -8,6 +8,8 @@ namespace AttackSlot.Constant
 
         public const float AttackIntervalSeconds = 1f;
 
+        public const float Radius = 0.5f;
+
     }
 
 }

@@ -1,6 +1,7 @@
 using System;
 using AttackSlot.Data;
 using AttackSlot.Immutable;
+using AttackSlot.Slot.MessageData;
 using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
@@ -17,7 +18,11 @@ namespace AttackSlot.Slot
         class ShortTermMemory
         {
 
+            public Vector3 Destination { get; set; }
+
             public float LastAttackedAt;
+
+            public SlotData SlotData;
 
         }
 
@@ -75,18 +80,28 @@ namespace AttackSlot.Slot
 
         public bool IsCloseToTarget()
         {
-            var isClose = ConditionService.IsCloseEnough(
-                this,
-                _slotEnemy,
-                _agentData.AttackRange
-            );
+            var diff = Memory.Destination - transform.position;
 
-            return isClose;
+            return diff.sqrMagnitude < _agentData.AttackRange * _agentData.AttackRange;
         }
 
         public void Move()
         {
-            _navMeshAgent.SetDestination(_slot.Center);
+            Memory.SlotData = _slot.GetSlot(transform.position);
+            Memory.Destination = _slot.GetPosition(Memory.SlotData);
+            _navMeshAgent.SetDestination(Memory.Destination);
+        }
+
+        public void UpdateSlot()
+        {
+            Memory.Destination = _slot.GetPosition(Memory.SlotData);
+            _navMeshAgent.SetDestination(Memory.Destination);
+        }
+
+        void OnDrawGizmos()
+        {
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawSphere(Memory.Destination, 0.5f);
         }
 
     }

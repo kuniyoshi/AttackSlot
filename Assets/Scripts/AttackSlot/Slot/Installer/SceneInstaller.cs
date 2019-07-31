@@ -13,6 +13,8 @@ namespace AttackSlot.Slot.Installer
 
         public SlotEnemy SlotEnemy;
 
+        public Slot Slot;
+
         public AgentInstaller AgentInstaller;
 
         void Awake()
@@ -32,15 +34,8 @@ namespace AttackSlot.Slot.Installer
                 .FromInstance(SlotEnemy)
                 .AsSingle();
 
-            Container.Bind<Slot>()
-                .FromMethod(context =>
-                {
-                    var agent = context.Container.Resolve<SlotEnemy>();
-                    var slot = agent.GetComponent<Slot>()
-                               ?? agent.gameObject.AddComponent<Slot>();
-
-                    return slot;
-                })
+            Container.BindInterfacesAndSelfTo<Slot>()
+                .FromInstance(Slot)
                 .AsSingle();
 
             Container.BindInterfacesAndSelfTo<SlotGame>()
