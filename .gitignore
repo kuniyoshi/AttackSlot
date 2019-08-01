@@ -55,3 +55,7 @@ sysinfo.txt
 /Assets/Plugins/Behavior\ Designer
 /Assets/Plugins/Behavior\ Designer.meta
 /Assets/Gizmos/Behavior*
+/Assets/Plugins/Demigiant.meta
+/Assets/Plugins/Demigiant/
+/Assets/Resources/DOTweenSettings.asset
+/Assets/Resources/DOTweenSettings.asset.meta
