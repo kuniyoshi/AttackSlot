@@ -8,13 +8,10 @@ using UnityEngine.AI;
 using UnityEngine.Assertions;
 using Zenject;
 
-namespace AttackSlot.Slot
+namespace AttackSlot.Slot.Slot
 {
 
-    public class Slot
-        : MonoBehaviour
-          , IInitializable
-          , IDisposable
+    public class SimpleSlot : BaseSlot
     {
 
         static int CalculateCountOfSlots(float largeRadius, float smallRadius)
@@ -40,7 +37,7 @@ namespace AttackSlot.Slot
             Assert.IsNotNull(_navMeshAgent, "_navMeshAgent != null");
         }
 
-        public void Initialize()
+        public override void Initialize()
         {
             var countOfSlots = CalculateCountOfSlots(_navMeshAgent.radius, AgentConstant.Radius);
             Debug.Log($"### count of slots: {countOfSlots}");
@@ -59,11 +56,11 @@ namespace AttackSlot.Slot
             }
         }
 
-        public void Dispose()
+        public override void Dispose()
         {
         }
 
-        public Vector3 GetPosition(SlotData slotData)
+        public override Vector3 GetPosition(SlotData slotData)
         {
             Assert.IsTrue(slotData.SlotIndex >= 0, "slotData.SlotIndex >= 0");
             Assert.IsTrue(slotData.SlotIndex < _slots.Count, "slotData.SlotIndex < _slots.Count");
@@ -71,7 +68,7 @@ namespace AttackSlot.Slot
             return Center + _slots[slotData.SlotIndex];
         }
 
-        public SlotData GetSlot(Vector3 fromPosition)
+        public override SlotData GetSlot(Vector3 fromPosition)
         {
             var positions = _slots.Select(slot => Center + slot)
                 .ToArray();

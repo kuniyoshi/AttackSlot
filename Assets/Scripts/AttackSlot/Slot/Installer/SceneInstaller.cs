@@ -1,5 +1,6 @@
 using AttackSlot.Data;
 using AttackSlot.Slot.Factory;
+using AttackSlot.Slot.Slot;
 using UnityEngine.Assertions;
 using Zenject;
 
@@ -13,7 +14,7 @@ namespace AttackSlot.Slot.Installer
 
         public SlotEnemy SlotEnemy;
 
-        public Slot Slot;
+        public BaseSlot Slot;
 
         public AgentInstaller AgentInstaller;
 
@@ -34,7 +35,7 @@ namespace AttackSlot.Slot.Installer
                 .FromInstance(SlotEnemy)
                 .AsSingle();
 
-            Container.BindInterfacesAndSelfTo<Slot>()
+            Container.BindInterfacesAndSelfTo<BaseSlot>()
                 .FromInstance(Slot)
                 .AsSingle();
 

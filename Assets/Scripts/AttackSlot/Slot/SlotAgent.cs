@@ -2,6 +2,7 @@ using System;
 using AttackSlot.Data;
 using AttackSlot.Immutable;
 using AttackSlot.Slot.MessageData;
+using AttackSlot.Slot.Slot;
 using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
@@ -32,7 +33,7 @@ namespace AttackSlot.Slot
 
         NavMeshAgent _navMeshAgent;
 
-        Slot _slot;
+        BaseSlot _slot;
 
         SlotEnemy _slotEnemy;
 
@@ -42,7 +43,7 @@ namespace AttackSlot.Slot
         void Constrct(AgentData agentData,
                       NavMeshAgent navMeshAgent,
                       SlotEnemy slotEnemy,
-                      Slot slot)
+                      BaseSlot slot)
         {
             _agentData = agentData;
             _navMeshAgent = navMeshAgent;
