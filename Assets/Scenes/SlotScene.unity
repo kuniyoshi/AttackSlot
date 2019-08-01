@@ -345,16 +345,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1592ff7206a04d9b8bfc2b6acc5cd2d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1120583535 stripped
+--- !u!114 &1223088762 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2291004641424339771, guid: dd93a1f0b53a84dceb66909c6b1bfbf4,
+  m_CorrespondingSourceObject: {fileID: 1328893586975002684, guid: dd93a1f0b53a84dceb66909c6b1bfbf4,
     type: 3}
   m_PrefabInstance: {fileID: 1120583533}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ea9f33a31054032bee9b9b78a433303, type: 3}
+  m_Script: {fileID: 11500000, guid: 7080d7d361504b2a8668ca67f941eb5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1321937285
@@ -442,7 +442,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Slot
       value: 
-      objectReference: {fileID: 1120583535}
+      objectReference: {fileID: 1223088762}
     - target: {fileID: 7714824218074133883, guid: 45cdb70c3dcd944e0ada5d54d679c53f,
         type: 3}
       propertyPath: m_Name

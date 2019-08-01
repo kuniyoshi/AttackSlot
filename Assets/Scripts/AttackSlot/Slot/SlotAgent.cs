@@ -95,6 +95,7 @@ namespace AttackSlot.Slot
 
         public void UpdateSlot()
         {
+            Memory.SlotData.UpdatePosition(transform.position);
             Memory.Destination = _slot.GetPosition(Memory.SlotData);
             _navMeshAgent.SetDestination(Memory.Destination);
         }

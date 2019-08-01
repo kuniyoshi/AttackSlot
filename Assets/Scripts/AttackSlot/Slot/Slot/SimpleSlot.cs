@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using AttackSlot.Constant;
@@ -14,21 +13,13 @@ namespace AttackSlot.Slot.Slot
     public class SimpleSlot : BaseSlot
     {
 
-        static int CalculateCountOfSlots(float largeRadius, float smallRadius)
-        {
-            var theta = Mathf.Asin(smallRadius / (largeRadius + smallRadius));
-            var count = Mathf.CeilToInt(2f * Mathf.PI / (2f * theta));
-
-            return count;
-        }
-
         NavMeshAgent _navMeshAgent;
 
         List<Vector3> _slots;
 
         Dictionary<int, int> _countOf;
 
-        public Vector3 Center => transform.position;
+        Vector3 Center => transform.position;
 
         [Inject]
         public void Construct(SlotEnemy slotEnemy)
@@ -39,7 +30,7 @@ namespace AttackSlot.Slot.Slot
 
         public override void Initialize()
         {
-            var countOfSlots = CalculateCountOfSlots(_navMeshAgent.radius, AgentConstant.Radius);
+            var countOfSlots = SlotService.CalculateCountOfSlots(_navMeshAgent.radius, AgentConstant.Radius);
             Debug.Log($"### count of slots: {countOfSlots}");
 
             _slots = new List<Vector3>();
