@@ -75,7 +75,7 @@ namespace AttackSlot.Slot
 
             _attackSequence?.Kill();
             _attackSequence = _body.DOJump(transform.position, 3f, 1, 0.5f);
-            _attackSequence.onComplete += () => { _body.localPosition = Vector3.zero; };
+            _attackSequence.onComplete += () => { _body.localPosition = new Vector3(0f, 1f, 0f); };
         }
 
         public bool CanAttack()
