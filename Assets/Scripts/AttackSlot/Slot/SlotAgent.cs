@@ -3,8 +3,10 @@ using AttackSlot.Data;
 using AttackSlot.Immutable;
 using AttackSlot.Slot.MessageData;
 using AttackSlot.Slot.Slot;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Assertions;
 using Zenject;
 
 namespace AttackSlot.Slot
@@ -31,6 +33,10 @@ namespace AttackSlot.Slot
 
         AgentData _agentData;
 
+        Sequence _attackSequence;
+
+        Transform _body;
+
         NavMeshAgent _navMeshAgent;
 
         BaseSlot _slot;
@@ -49,6 +55,9 @@ namespace AttackSlot.Slot
             _navMeshAgent = navMeshAgent;
             _slotEnemy = slotEnemy;
             _slot = slot;
+
+            _body = transform.GetChild(0);
+            Assert.IsNotNull(_body, "_body != null");
         }
 
         public void Initialize()
@@ -61,10 +70,12 @@ namespace AttackSlot.Slot
 
         public void Attack()
         {
-            Debug.Log($"### Attack");
             Memory.LastAttackedAt = Time.time;
-
             _navMeshAgent.isStopped = true;
+
+            _attackSequence?.Kill();
+            _attackSequence = _body.DOJump(transform.position, 3f, 1, 0.5f);
+            _attackSequence.onComplete += () => { _body.localPosition = Vector3.zero; };
         }
 
         public bool CanAttack()
